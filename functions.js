@@ -170,3 +170,65 @@ while(htmlStudents.length > 0) {
 }
 
 //Objects class
+//This is how we declare an object in JavaScript
+var myCar = {
+    brand: "Toyota",
+    model: "Corolla",
+    year: 2020,
+    carDetail: function(){
+        console.log(`Car ${this.model} ${this.year}`);
+    }
+};
+//we can access a value we can use:
+console.log(myCar.brand);
+//we can call a function inside an object
+myCar.carDetail();
+
+//Objects: Constructor function class
+function car(brand, model, year) {
+    this.brand = brand;
+    this.model = model;
+    this.year = year;
+}
+var newCar = new car("Tesla", "Model 3", 2020);
+console.log(newCar);
+var newCar2 = new car("Tesla", "Model X", 2018);
+console.log(newCar2);
+var newCar3 = new car("Toyota", "Corolla", 2019);
+console.log(newCar3);
+
+//Arrays methods
+var storeArticles = [
+    { name: "Bicycle", cost: 3000},
+    { name: "TV", cost: 2500},
+    { name: "Book", cost: 320},
+    { name: "Cellphone", cost: 10000},
+    { name: "Laptop", cost: 20000},
+    { name: "Keyboard", cost: 500},
+    { name: "Headphones", cost: 1700},
+];
+//First method: Filter will make a new array with the result
+var filteredArticles = storeArticles.filter(function(article){
+    return article.cost <= 500;
+});
+console.log(filteredArticles);
+//Second method: Map will make a new array with the result
+var nameMapArticles = storeArticles.map(function(article){
+    return article.name;
+});
+console.log(nameMapArticles);
+//Third method: find(), it search and returns the FIRST element it finds
+var findArticle = storeArticles.find(function(article){
+    return article.name === "Laptop";
+});
+console.log(findArticle);
+//Fourth method: forEach(), It does what we tell it with each element of the array-
+storeArticles.forEach(function(article){
+    console.log(article.name);
+});
+//Fifth method: some(), it validate if at least one of the elements meets the condition
+//it returns true or false
+var cheapArticles = storeArticles.some(function(article){
+    return article.cost <= 700;
+});
+console.log(cheapArticles);
