@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Piedra, Papel o Tijera by ArudoPE</title>
+</head>
+<body>
+    <main class="main flex">
+        <section class="game-section flex">
+            <h1>Bienvenido al juego de Piedra, Papel o Tijera</h1>
+            <h3>Elige: Piedra, papel o tijera ¡y mira si ganaste!</h3>
+            <section class="boxes--container flex">
+                <div class="game-box stone-box" id="stone-box" onclick="rockChoice()">
+                </div>
+                <div class="game-box paper-box" id="paper-box" onclick="paperChoice()">
+                </div>
+                <div class="game-box scissor-box" id="scissor-box" onclick="scissorChoice()">
+                </div>
+            </section>
+        </section>
+    </main>
+    <script src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+/*RESET*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/*SHARED*/
+:root {
+    --black: rgb(12, 12, 12);
+    --white: rgb(243, 243, 243);
+}
+.flex {
+    display: flex;
+}
+/*MAIN*/
+.main {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--black);
+    justify-content: center;
+    align-items: center;
+}
+.main .game-section {
+    flex-direction: column;
+    align-items: center;
+}
+.main .game-section h1,
+.main .game-section h3 {
+    color: var(--white);
+    margin-bottom: 20px;
+    text-align: center;
+}
+.main .game-section h1 {
+    font-size: 40px;
+    padding: 0 5px;
+}
+.boxes--container {
+    margin-top: 20px;
+}
+.boxes--container .game-box {
+    width: 200px;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    margin: 0 20px;
+    cursor: pointer;
+    /*BOX SHADOW*/
+    -webkit-box-shadow: 10px 3px 37px -24px rgba(255,255,255,1);
+    -moz-box-shadow: 10px 3px 37px -24px rgba(255,255,255,1);
+    box-shadow: 10px 3px 37px -24px rgba(255,255,255,1);
+}
+.boxes--container .game-box:hover {
+    transform: scale(1.25);
+    transition-duration: 0.5s;
+}
+.boxes--container .stone-box {
+    background-image: url('./img/piedra.jpg');
+}
+.boxes--container .paper-box {
+    background-image: url('./img/papel.jpg');
+}
+.boxes--container .scissor-box {
+    background-image: url('./img/tijera.jpg');
+}
+
